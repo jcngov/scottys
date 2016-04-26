@@ -5,6 +5,7 @@
 
 .food {
   max-width: 30%;
+  position: relative;
   filter: gray; /* IE6-9 */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
@@ -13,10 +14,20 @@
 .food:hover {
   filter: none;
   -webkit-filter: grayscale(0);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: .5s ease-in-out;
 }
+
+
 
 .food-pics {
   text-align: center;
+}
+
+.food-pics .breakfast {
+  z-index: 1;
 }
 
 li {
